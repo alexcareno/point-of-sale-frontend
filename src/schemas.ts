@@ -11,8 +11,13 @@ export const ProductSchema = z.object({
     image: z.string(),
     price: z.coerce.number(),
     stock: z.number(),
+    categoryId: z.number()
 })
 
 export const CategoryWithProductsResponseSchema = CategorySchema.extend({
     products: z.array(ProductSchema)
 });
+
+export const CategoriesResponseSchema = z.array(CategorySchema);
+
+export type Product = z.infer<typeof ProductSchema>;
