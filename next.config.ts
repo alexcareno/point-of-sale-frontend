@@ -4,12 +4,8 @@ const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: 'http',
-        hostname: process.env.DOMAIN!
-      },
-      {
         protocol: 'https',
-        hostname: 'deploy-pos-nestjs.onrender.com'
+        hostname: 'point-of-sale-alexcareno.onrender.com'
       },
       {
         protocol: 'https',
